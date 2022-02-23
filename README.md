@@ -8,10 +8,8 @@ O principal objetivo da aplicação seria desenvolver o conhecimento do usuário
 
 ## Integrantes
 
-Arquiteto de software: 
-Lucas Santos
-Desenvolvedores Mobile: 
-Samuel Moreira
+* Lucas Santos
+* Samuel Moreira
 César Oncala
 Leonardo Lopes
 Lucas Lemos
