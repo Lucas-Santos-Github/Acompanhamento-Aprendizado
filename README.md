@@ -1,5 +1,5 @@
 # Acompanhamento-Aprendizado
-Grupo 1 - Desenvolvimento de Aplicações Distribuidas
+## Grupo 1 - Desenvolvimento de Aplicações Distribuidas
 
 `SISTEMAS DE INFORMAÇÃO`
 `1/2022`
