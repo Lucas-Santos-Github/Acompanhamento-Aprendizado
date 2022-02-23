@@ -24,6 +24,5 @@ O principal objetivo da aplicação seria desenvolver o conhecimento do usuário
 * Kleber Jacques Ferreira de Souza
 
 ## Documentação
-Documentação/01 - Documentação de contexto.mdx
-
 <li><a href="Documentação/01 - Documentação de contexto.md">Documentação de Contexto</a></li>
+<li><a href="Documentação/02 - Especificação.md">Especificação do Projeto</a></li>
