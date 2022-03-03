@@ -8,16 +8,17 @@ O principal objetivo da aplicação seria desenvolver o conhecimento do usuário
 
 ## Integrantes
 
-* Lucas Santos
-* Samuel Moreira
-* César Oncala
-* Leonardo Lopes
-* Lucas Lemos
-* Luan Ferreira
+
 * Carlos Papa
-* Lucas Romero
+* César Oncala
 * Gabriel Soalheiro
+* Leonardo Lopes
+* Luan Ferreira
+* Lucas Lemos
+* Lucas Romero
+* Lucas Santos
 * Robert Medeiros 
+* Samuel Moreira
 
 ## Orientador
 
