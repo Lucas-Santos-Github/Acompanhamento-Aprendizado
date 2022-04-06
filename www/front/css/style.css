@@ -1,0 +1,19 @@
+.imagemperfil {
+    background-color: lightgray;
+    margin-top: 25px;
+    padding: 30px;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 100%;
+    
+}
+
+.infousuario {
+    margin-bottom: 0;
+}
