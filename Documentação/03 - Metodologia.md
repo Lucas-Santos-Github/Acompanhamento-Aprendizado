@@ -19,5 +19,7 @@ Define-se o quadro kanban:
 
 ## Ferramentas
 
-As ferramentas empregadas no projeto são:
-(ainda em definição)
+* Front: HTML, CSS, JavaScript, Bootstrap
+* Back:  ORM Entity Framework, .NET 6
+* Mobile:  React Native
+* Banco: MySQL ou Postgree
