@@ -21,3 +21,52 @@
 .destaque-perfil {
     font-weight: bolder;
 }
+
+.cabecalho{
+    background-color: white;
+    height: 400px;
+}
+.tela_ranking{
+    margin: auto;
+    height: 400px;
+    width: 80%;
+    border:3px solid green;
+    margin-top: 60px;
+    background-color: rebeccapurple;
+}
+
+fieldset.grupo{
+    margin-left: 135px;
+    margin-right: 1em;
+}
+.row{
+    margin-left: 130px;
+
+}
+.column{
+    float: left;
+    width: 44%;
+    padding: 5px;
+}
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+  
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
