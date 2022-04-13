@@ -111,7 +111,7 @@ section{
     left:2px;
     right: 2px;
     bottom: 0;
-    background: linear-gradient(0deg, #f0f1f5, #f0f2f3);
+    border:2px solid black;
 }
 .box .skill .graph:after{
     content: '';
@@ -144,3 +144,8 @@ section{
     padding: 2px, 6px;
     border-radius: 4px;
 }
+img{
+    height: 100%;
+    width: 100%;
+}
+  
