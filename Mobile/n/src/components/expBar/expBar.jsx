@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Text, View } from 'react-native'
 import * as Progress from 'react-native-progress';
 import { styles } from './styles';
-import { apiBaseAddress } from '../../enviroments';
+import { apiBaseAddress, FakeProgressBar } from '../../enviroments';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -21,7 +21,7 @@ const ExpBar = () => {
             <View style={styles.container}>
                 <Text style={styles.description}>
                     <Icon name="bolt" size={16} color="black" />
-                    EXP {expBar.currentExp}/{expBar.totalExp} – Próximo ranking: {expBar.nextRanking}
+                   {"\t"} EXP {expBar.currentExp}/{expBar.totalExp} – Próximo ranking: {expBar.nextRanking}
                 </Text>
                 <Progress.Bar
                     progress={expBar.progressPercent}
@@ -45,6 +45,7 @@ function LoadExpBarData(setter) {
     fetch(`${apiBaseAddress}ProgressBar`)
         .then(o => o.json())
         .then(o => setter(o))
+        .catch(o=> setter(FakeProgressBar))
 }
 
 

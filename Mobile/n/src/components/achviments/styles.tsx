@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { grey200 } from "react-native-paper/lib/typescript/styles/colors";
 
 
 export const styles = StyleSheet.create({
@@ -15,9 +14,11 @@ export const styles = StyleSheet.create({
         borderWidth: 5,
         marginTop: 12,
         marginLeft: 8,
+        marginRight:8,
         borderRadius: 6,
-        width: '60%',
         padding: 22,
+        marginBottom:5,
+        flexWrap:'wrap',
         justifyContent: 'center',
     },
     title: {

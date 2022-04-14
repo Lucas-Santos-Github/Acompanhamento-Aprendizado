@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Text, View, Image } from 'react-native'
 import { styles } from './styles';
-import {apiBaseAddress} from '../../enviroments'
+import { apiBaseAddress, FakeAchviments } from '../../enviroments'
 
 const Achivments = () => {
 
@@ -15,9 +15,9 @@ const Achivments = () => {
         <>
             <Text style={styles.title}>Conquistas</Text>
             {
-                achivments.map((o, i) => <View style={styles.mainView}>
+                achivments.map((o, i) => <View key={i} style={styles.mainView}>
 
-                    <View key={i} style={styles.achvimentView}>
+                    <View style={styles.achvimentView}>
                         <Image source={{ uri: o.icon }}
                             style={styles.iconImage}
                         ></Image>
@@ -40,7 +40,7 @@ function LoadAchviments(setAchviments: Function): void {
     fetch(`${apiBaseAddress}achivments`)
         .then(o => o.json())
         .then(o => setAchviments(o))
-        .catch(o=> alert(o))
+        .catch(o => setAchviments(FakeAchviments))
 }
 
 

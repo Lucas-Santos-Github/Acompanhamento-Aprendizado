@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Text, Image, View, ImageBackground } from 'react-native';
 import { styles } from './styles';
-import {apiBaseAddress} from '../../enviroments'
+import { apiBaseAddress, FakeUser } from '../../enviroments'
 
 
 const UserInfos = () => {
@@ -41,13 +41,24 @@ function LoadUserData(setUser: Function): void {
     fetch(`${apiBaseAddress}user`)
         .then(o => o.json())
         .then(o => {
-
-            o["birthDay"] = (new Date().getFullYear()
-                - new Date(o.birthDay).getFullYear())
-
+            o.birthDay = GetAge(o);
             setUser(o);
         })
-        .catch(o=> alert(o))
+        .catch(o => {
+
+
+            let t = FakeUser
+            t.birthDay = GetAge(t)
+
+            setUser(t)
+
+        })
+}
+
+function GetAge(o) {
+    return (new Date().getFullYear()
+        - new Date(o.birthDay).getFullYear()).toString()
+
 }
 
 
