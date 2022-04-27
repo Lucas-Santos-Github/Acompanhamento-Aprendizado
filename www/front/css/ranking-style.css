@@ -1,0 +1,141 @@
+.cabecalho{
+    background-color: white;
+    height: 400px;
+}
+
+section.grupo{
+    margin-top: -320px;
+    margin-left: 135px;
+    margin-right: 1em;
+}
+
+.filterTwo{
+    padding-left: 300px;
+    margin-top: -62px;
+}
+
+section.row{
+    margin-top: -550px;
+    margin-left: 135px;
+    margin-right: 1em;
+}
+.row {
+    margin-top: 100px;
+    margin-left: auto;
+    width: 92%;
+}
+.column{
+    width: 50%;
+    padding: 5px;
+
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, blue);
+}
+/*.tela_ranking{
+    margin: auto;
+    height: 400px;
+    width: 80%;
+    border:2px solid black;
+    margin-top: 60px;
+}*/
+
+.box{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 250px;
+    border:2px solid black;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    display: flex;
+
+}
+.box .skill{
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+.box .skill .graph{
+    position: absolute;
+    width: 130px;
+    background: rgba(141, 8, 8, 0.1);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box .skill .graph:before{
+    content: '';
+    position: absolute;
+    top:2px;
+    left:2px;
+    right: 2px;
+    bottom: 0;
+    border:1px solid black;
+}
+.box .skill .graph:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(255, 255,255,.1);
+}
+
+.box .skill .graph .percent{
+
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.box .skill .name{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: black;
+    padding: 2px, 6px;
+    border-radius: 4px;
+}
+svg{
+    height: 100%;
+    width: 65%;
+}
+.row_ranking{
+    margin-top: -620px;
+    margin-left: 130px;
+    width: 92%;
+}
+.container{
+    margin-top:80px;
+    margin-bottom:80px;
+}    
+.img-card-user{
+width:220px;
+border-radius:50%;
+}
