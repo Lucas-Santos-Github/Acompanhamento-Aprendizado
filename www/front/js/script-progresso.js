@@ -30,32 +30,7 @@ function detalhesUsuario(url) {
       </div>
       <hr style="height: 5px; margin-top: 1px; background-color: gray; opacity: 100 !important;">
       
-      <h2 class="destaque-perfil">Conquistas</h2>
-      <div class="card">
-        <div class="card-body">
-          <i class="bi bi-hourglass-bottom"></i>
-          <h5 class="card-title">
-            Matador de Quiz</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Terminou um quiz em menos de 60s.</h6>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <i class="bi bi-check-circle-fill"></i>
-          <h5 class="card-title">O
-            Sabe-Tudo</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Terminou um Quiz sem errar perguntas.</h6>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <i class="bi bi-star-fill"></i>
-          <h5 class="card-title">
-            Majestoso</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Alcançou o Ranking de Cavaleiro.</h6>
-        </div>
-      </div>
-    </div>
+      
     `
     );
 

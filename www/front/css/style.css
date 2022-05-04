@@ -238,10 +238,10 @@ img {
 
 /* LUAN INICIA */
 
-.bs-wizard {margin-top: 40px;}
+.bs-wizard {margin-top: 400px; margin-left: 200px; width: 20px;}
 /*Form Wizard*/
 .bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
-.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: re;}
 .bs-wizard > .bs-wizard-step + .bs-wizard-step {color :#000}
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 16px; margin-bottom: 5px;}
 .bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
@@ -259,8 +259,13 @@ img {
 .bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
 
+.col-xs-3 {
+    width: 234px;
+}
 
-
+.nivel-progresso {
+    font-weight: bolder;
+}
 
 .progresses {
     display: flex;
@@ -284,6 +289,72 @@ img {
     justify-content: center;
     border-radius: 50%
 }
+
+
+
+
+
+
+body-card-perfil {
+    text-align: center;
+    padding: 30px;
+    background: #f8f4f2;
+    font-family: Arial;
+  }
+  
+  .a-box-card {
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+  }
+  
+  .img-container-card {
+      height: 230px;
+      width: 200px;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+      display: inline-block;
+  }
+  
+  .img-container-card img {
+      transform: skew(0deg, -13deg);
+      height: 250px;
+      margin: -35px 0px 0px -70px;
+  }
+  
+  .inner-skew-card {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 0px;
+      transform: skew(0deg, 13deg);
+      font-size: 0px;
+      margin: 30px 0px 0px 0px;
+      background: #c8c2c2;
+      height: 250px;
+      width: 200px;
+  }
+  
+  .text-container-card {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+  }
+  
+  .text-container-card h3 {
+    margin: 20px 0px 10px 0px;
+    color: #04bcff;
+    font-size: 18px;
+  }
+
+
+
+
+
 /* LUAN ACABA */
 =======
 >>>>>>> a84a9d395511e1dc0743b0698fbed41223cebc03
