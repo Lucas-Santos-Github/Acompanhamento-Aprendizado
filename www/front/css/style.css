@@ -260,7 +260,7 @@ img {
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
 
 .col-xs-3 {
-    width: 234px;
+    width: 225px;
 }
 
 .nivel-progresso {
