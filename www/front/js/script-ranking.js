@@ -26,6 +26,7 @@ const addPostsIntoPodium = (podium) => {
     console.log('index:', index)
     document.querySelector(`.top${index + 1} .profile`).src = item.ProfilePic;
     document.querySelector(`.top${index + 1} .xp-number`).innerHTML = `${item.XPAtual} xp`;
+    document.querySelector(`.top${index + 1} .name`).innerHTML = `${item.Nome}`;
   })
 }
 
