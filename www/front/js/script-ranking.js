@@ -9,12 +9,11 @@ const getPosts = async () => {
 
 
 const addPostsIntoDom = (posts) => {
-  const melhores = posts.map(({ Nome, id, XPAtual}) => {
+  const melhores = posts.map(({ Nome, XPAtual}) => {
       return `
         <tr>
-        <td>${id}</td>
-        <td>${Nome}</td>
-        <td>${XPAtual}</td>
+        <td style=" font-style: italic; font-size: 18px;">${Nome}</td>
+        <td style="text-align: center; font-style: italic; font-size: 18px;">${XPAtual}</td>
         </tr>
         `;
     }).join("");

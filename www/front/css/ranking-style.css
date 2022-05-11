@@ -1,31 +1,46 @@
   table {
-      font-family: arial, sans-serif;
+      font-family: sans-serif;
       border-collapse: collapse;
-      width: 600px;
+      width: 675px;
       margin: 0 auto;
-      
+      background-color: #CFCFCF;
+      box-shadow: 0 35px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur( 13.5px );
+      -webkit-backdrop-filter: blur( 13.5px );
+      /* border-radius: 0px; */
+      border: 1px solid rgba(2, 2, 2, 0.18);
     }
     
     td, th {
       
-      border: 1px solid #dddddd;
+      border: 1px solid #161616;
       text-align: left;
-      padding: 8px;
+      padding: 10px;
     }
     
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
+    /* tr:nth-child(even) {
+      background-color: #e6d2d2;
+    } */
 
   .retanglo {
-    width: 100%;
-    background-color: #9797e0;
+    width: 50%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     padding: 0 15%;
-    gap: 10%;
-    margin: 60px 0;
+    gap: 20%;
+    margin: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #399dcc ;
+    box-shadow: 0 25px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    /* border-radius: 5px; */
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    margin-top: 25px;
+    /* padding:0 30px; */
+
   }
 
   .podium {
@@ -36,7 +51,7 @@
   }
 
   .xp {
-    background: white;
+    background: green;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,22 +71,23 @@
   }
 
   .trophy {
-    width: 50px;
+    width: 45px;
     margin-bottom: 20px;
   }
 
   .name {
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 0;
   }
 
   .profile {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
   }
 
   .xp-number {
     font-size: 20px;
+    text-align: center;
   }
