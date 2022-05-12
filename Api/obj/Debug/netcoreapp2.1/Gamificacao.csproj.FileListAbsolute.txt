@@ -1,0 +1,6 @@
+C:\Users\1209550\Downloads\Gamificacao\obj\Debug\netcoreapp2.1\Gamificacao.csprojAssemblyReference.cache
+C:\Users\1209550\Downloads\Gamificacao\obj\Debug\netcoreapp2.1\Gamificacao.csproj.CoreCompileInputs.cache
+C:\Users\1209550\Downloads\Gamificacao\obj\Debug\netcoreapp2.1\Gamificacao.RazorAssemblyInfo.cache
+C:\Users\1209550\Downloads\Gamificacao\obj\Debug\netcoreapp2.1\Gamificacao.RazorAssemblyInfo.cs
+C:\Users\1209550\Downloads\Gamificacao\obj\Debug\netcoreapp2.1\Gamificacao.AssemblyInfoInputs.cache
+C:\Users\1209550\Downloads\Gamificacao\obj\Debug\netcoreapp2.1\Gamificacao.AssemblyInfo.cs
