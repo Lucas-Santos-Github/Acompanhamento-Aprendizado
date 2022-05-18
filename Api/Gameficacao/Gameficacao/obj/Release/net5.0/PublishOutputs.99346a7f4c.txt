@@ -1,0 +1,15 @@
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Gameficacao.exe
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Gameficacao.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Gameficacao.deps.json
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Gameficacao.runtimeconfig.json
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Gameficacao.pdb
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.Bson.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\rick\Documents\Gameficacao\Gameficacao\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
