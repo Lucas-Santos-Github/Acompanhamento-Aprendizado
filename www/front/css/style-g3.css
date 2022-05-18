@@ -1,0 +1,80 @@
+
+html {
+    font-size: 14px;
+}
+
+.nav-item {
+    font-size: 18px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4ea84e;
+    border-color: #1861ac;
+}
+
+.navbar-custom {
+    background-color: #979faa !important;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+h11 {
+    color: red;
+}
+
+#logo {
+    width: 50%;
+    height: 50%;
+}
+
+.panel-heading {
+    font-size: 150%;
+    background-color: #979faa !important;
+}
+
+
+
+.form-group {
+    text-align: left;
+    align-items: left;
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+html {
+    height: 100%;
+    width: 100%;
+}
+

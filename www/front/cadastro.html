@@ -1,0 +1,128 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+
+<form class="form-horizontal">
+<fieldset>
+<div class="panel panel-primary">
+    <div class="panel-heading">Cadastro</div>
+    
+    <div class="panel-body">
+<div class="form-group">
+<!--
+<div class="form-group">   
+<div class="col-md-4 control-label">
+    <img id="logo" src=""/>
+</div>
+<div class="col-md-4 control-label">
+    <h1>Cadastro</h1>
+    
+</div>
+</div>
+    -->
+<div class="col-md-11 control-label">
+        <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>  
+  <div class="col-md-5">
+  <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
+  </div>
+</div>
+
+<!-- Text input-->
+ <div class="form-group"> 
+  <label class="col-md-2 control-label" for="Nome">Nascimento<h11>*</h11></label>  
+  <div class="col-md-5">
+  <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+</div>
+
+
+<!-- Multiple Radios (inline) -->
+
+  <label class="col-md-1 control-label" for="radios">Gênero <h11>*</h11></label>
+  <div class="col-md-4"> 
+    <label required="" class="radio-inline" for="radios-0" >
+      <input name="genero" id="genero" value="feminino" type="radio" required>
+      Feminino
+    </label> 
+    <label class="radio-inline" for="radios-1">
+      <input name="genero" id="genero" value="masculino" type="radio">
+      Masculino
+    </label>
+    <label class="radio-inline" for="radios-1">
+      <input name="genero" id="genero" value="outro" type="radio">
+      Outro
+    </label>
+  </div>
+</div>
+
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="prependedtext">Email <h11>*</h11></label>
+  <div class="col-md-5">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="prependedtext">Senha<h11>*</h11></label>
+  <div class="col-md-5">
+    <div class="input-group">
+    <input type="password" class="form-control" id="pass" name="password" placeholder="Min. 8 caracteres"
+           minlength="8" required>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="selectbasic">Role <h11>*</h11></label>
+  <div class="col-md-2">
+    <select required id="Role" name="Role" class="form-select">
+        <option value=""></option>
+      <option value="Admin">Admin</option>
+      <option value="Aluno">Aluno</option>
+      <option value="Professor">Professor</option>
+    </select>
+  </div>
+  
+
+ 
+</div>
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="Cadastrar"></label>
+  <div class="col-md-5">
+    <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+    <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+</fieldset>
+</form>
+
+</body>
+</html>
