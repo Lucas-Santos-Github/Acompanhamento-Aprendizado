@@ -1,8 +1,11 @@
-﻿using Gamificacao.models;
+﻿using Gameficacao.Extensions;
+using Gameficacao.models;
+using Gamificacao.models;
 using Gamificacao.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using RankingApi.Context;
 using System;
@@ -19,17 +22,22 @@ namespace Gamificacao.Controllers
     [ApiController]
     public class ProgressController : ControllerBase
     {
+        readonly IConfiguration _configuration;
+        HttpClient http;
+
+        public ProgressController(IConfiguration configuration)
+        {
+            this._configuration = configuration;
+            this.http = new HttpClient() { BaseAddress = new Uri(this._configuration["Apis:quizzes"]) };
+          
+
+        }
 
         [HttpGet("progress/{userId}")]
         public async Task<IActionResult> GetProgress(int userId)
         {
-            // Pegar lista de materias com quizes do usuario {userId}
-
-            const string quizApi = "https://masterquizapi.herokuapp.com/api/";
-
-            HttpClient http = new HttpClient() { BaseAddress = new Uri(quizApi) };
-
-            var result = http.GetAsync($"Quiz/Resultado/{userId}").Result;
+            this.http.SetExternalUserAuthenticationToken(User);
+            var result = this.http.GetAsync($"Quiz/Resultado/{userId}").Result;
 
             if (result.IsSuccessStatusCode)
             {

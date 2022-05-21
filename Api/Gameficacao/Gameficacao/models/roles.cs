@@ -1,12 +1,8 @@
 ﻿namespace Gameficacao.models
 {
-    public class roles
+    public static class roles
     {
-        public static class Roles
-        {
-            public const string Professor = "Professor";
-            public const string Aluno = "Aluno";
- 
-        }
+        public const string Professor = "Professor";
+        public const string Aluno = "Aluno";
     }
 }
