@@ -14,14 +14,14 @@ namespace Gamificacao.Services
             var PontuacaoMateria = (from m in materias
                                     select new
                                     {
-                                        TotalPts = (m.Quizzes.Sum(o => o.qtdacertos)
-                                        * 100) / m.Quizzes.Sum(o => o.qttperguntas),
+                                        TotalPts = (m.Quizzes.Sum(o => o.questoescorretas)
+                                        * 100) / m.Quizzes.Sum(o => o.quantidadequestoes),
 
-                                        m.NomeMateria
+                                        m.MateriaId
                                     });
 
 
-            int totalPtsPossiveis = materias.Sum(o => (int)Math.Round(o.Quizzes.Sum(w => (double)w.qttperguntas * 3.3), 2)),
+            int totalPtsPossiveis = materias.Sum(o => (int)Math.Round(o.Quizzes.Sum(w => (double)w.quantidadequestoes * 3.3), 2)),
 
             totalPtsObtidos = PontuacaoMateria.Sum(o => o.TotalPts);
 

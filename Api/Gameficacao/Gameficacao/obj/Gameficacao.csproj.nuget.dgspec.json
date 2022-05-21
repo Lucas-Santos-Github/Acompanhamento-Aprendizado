@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rick\\Documents\\Gameficacao\\Gameficacao\\Gameficacao.csproj": {}
+    "C:\\Users\\rick\\Desktop\\Acompanhamento-Aprendizado\\Api\\Gameficacao\\Gameficacao\\Gameficacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rick\\Documents\\Gameficacao\\Gameficacao\\Gameficacao.csproj": {
+    "C:\\Users\\rick\\Desktop\\Acompanhamento-Aprendizado\\Api\\Gameficacao\\Gameficacao\\Gameficacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rick\\Documents\\Gameficacao\\Gameficacao\\Gameficacao.csproj",
+        "projectUniqueName": "C:\\Users\\rick\\Desktop\\Acompanhamento-Aprendizado\\Api\\Gameficacao\\Gameficacao\\Gameficacao.csproj",
         "projectName": "Gameficacao",
-        "projectPath": "C:\\Users\\rick\\Documents\\Gameficacao\\Gameficacao\\Gameficacao.csproj",
+        "projectPath": "C:\\Users\\rick\\Desktop\\Acompanhamento-Aprendizado\\Api\\Gameficacao\\Gameficacao\\Gameficacao.csproj",
         "packagesPath": "C:\\Users\\rick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rick\\Documents\\Gameficacao\\Gameficacao\\obj\\",
+        "outputPath": "C:\\Users\\rick\\Desktop\\Acompanhamento-Aprendizado\\Api\\Gameficacao\\Gameficacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rick\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.17, )"

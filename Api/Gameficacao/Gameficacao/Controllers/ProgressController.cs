@@ -1,13 +1,20 @@
 ﻿using Gamificacao.models;
 using Gamificacao.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RankingApi.Context;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Gamificacao.Controllers
 {
+    [Authorize(Roles = "Aluno,Professor")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProgressController : ControllerBase
@@ -17,83 +24,41 @@ namespace Gamificacao.Controllers
         public async Task<IActionResult> GetProgress(int userId)
         {
             // Pegar lista de materias com quizes do usuario {userId}
-            var materias = new List<Materia>()
+
+            const string quizApi = "https://masterquizapi.herokuapp.com/api/";
+
+            HttpClient http = new HttpClient() { BaseAddress = new Uri(quizApi) };
+
+            var result = http.GetAsync($"Quiz/Resultado/{userId}").Result;
+
+            if (result.IsSuccessStatusCode)
             {
-
-                  new Materia
-                  {
-                       NomeMateria = "POO",
-                       Quizzes = new List<Quiz>()
-                       {
-                           new Quiz()
-                           {
-                               qtdacertos = 6,
-                               qttperguntas = 10
-                           },
-                           new Quiz()
-                           {
-                               qtdacertos = 9,
-                               qttperguntas = 10
-                           },
-                           new Quiz()
-                           {
-                               qtdacertos = 4,
-                               qttperguntas = 10
-                           }
-                       }
-                  },
-                     new Materia
-                  {
-                       NomeMateria = "AED",
-                       Quizzes = new List<Quiz>()
-                       {
-                           new Quiz()
-                           {
-                               qtdacertos = 4,
-                               qttperguntas = 10
-                           },
-                           new Quiz()
-                           {
-                               qtdacertos = 3,
-                               qttperguntas = 10
-                           },
-                           new Quiz()
-                           {
-                               qtdacertos = 0,
-                               qttperguntas = 10
-                           }
-                       }
-                  },
-
-                   new Materia
-                  {
-                       NomeMateria = "ATP",
-                       Quizzes = new List<Quiz>()
-                       {
-                           new Quiz()
-                           {
-                               qtdacertos = 10,
-                               qttperguntas = 10
-                           },
-                           new Quiz()
-                           {
-                               qtdacertos = 9,
-                               qttperguntas = 10
-                           },
-                           new Quiz()
-                           {
-                               qtdacertos = 8,
-                               qttperguntas = 10
-                           }
-                       }
-                  },
+                var quizzes = JsonConvert.DeserializeObject<List<Quiz>>((await result.Content.ReadAsStringAsync()));
 
 
+                if (quizzes.Any())
+                {
+                    var materias = quizzes.Select(materia => materia.materiaquiz)
+                            .Distinct()
+                            .Select(o => new Materia
+                            {
+                                MateriaId = o,
+                                Quizzes = (from quiz in quizzes
+                                           where quiz.materiaquiz == o
+                                           group quiz by quiz.materiaquiz into QuizzesPorMateria
+                                           select QuizzesPorMateria).SelectMany(o => o).ToList()
 
-            };
+                            }).ToList();
 
 
-            return Ok(new ProgressService().GetProgress(materias));
+                    return Ok(new ProgressService().GetProgress(materias));
+
+                }
+
+            }
+
+            return NotFound("Usuario não encontrado");
+
         }
 
 

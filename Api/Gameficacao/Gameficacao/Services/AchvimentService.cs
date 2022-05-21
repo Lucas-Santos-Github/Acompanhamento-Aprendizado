@@ -10,21 +10,21 @@ namespace Apiconquista.Services
     public class AchivmentService
     {
 
-     
+
 
         #region [Testes de Conquistas]
         Func<Quiz, Achivment>[] AchivmentsList =
             new Func<Quiz, Achivment>[]
         {
-           q=> q.qtdacertos == q.qttperguntas ? new Achivment
-           {     
+           q=> q.questoescorretas == q.quantidadequestoes ? new Achivment
+           {
                id='1',
                 description = "Acertou todas as perguntas",
                 title = "O sabe tudo",
                 icon = "https://2.bp.blogspot.com/_U6v9CkCPQxM/TPaZ7RqoI7I/AAAAAAAAARk/7E7lSpkzvIg/s1600/chuck_norris-unisanta.jpg"
            } : null,
 
-           q=> q.qtdacertos == 0? new Achivment
+           q=> q.questoescorretas == 0? new Achivment
            {
                id='2',
                description = "Errou todas as questões",
@@ -32,7 +32,7 @@ namespace Apiconquista.Services
                 icon = "imagem da conquista"
            } : null,
 
-           q=> q.tempgasto.TotalSeconds < 60 ? new Achivment
+           q=> q.tempoquiz.TotalSeconds < 60 ? new Achivment
            {
                id='3',
                description="Terminou um quiz em menos de 60s",
@@ -42,7 +42,7 @@ namespace Apiconquista.Services
 
            } : null,
 
-           q=>q.tempgasto.TotalSeconds > 60*60 ? new Achivment
+           q=>q.tempoquiz.TotalSeconds > 60*60 ? new Achivment
            {
                id='4',
               description="Demorou mais de 1 hora para terminar o quiz",
@@ -51,7 +51,7 @@ namespace Apiconquista.Services
 
            } : null,
 
-           q=> q.qtdacertos == q.qttperguntas && q.tempgasto.TotalSeconds == 60? new Achivment
+           q=> q.quantidadequestoes == q.questoescorretas && q.tempoquiz.TotalSeconds == 60? new Achivment
            {
                id='5',
                description = "Selo dlç",

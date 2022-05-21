@@ -8,59 +8,35 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RankingApi.Services;
 using RankingApi.Context;
+using System.Net.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RankingApi.Controllers
 {
+    [Authorize(Roles = "Aluno,Professor")]
     [Route("api/[controller]")]
     [ApiController]
     public class RankingController : ControllerBase
     {
-         #region [Quizzes que virão da api]
-        private  readonly Quiz[] quizes = new Quiz[]
-        {
-            new Quiz
-            {
-                NotaTotal= 10,
-                TempoTotal=new TimeSpan(1,60,0),
-            },
-            new Quiz
-            {
-                NotaTotal= 10,
-                TempoTotal=new TimeSpan(0,60,0),
-            },
-            new  Quiz
-            {
-                NotaTotal= 10,
-                TempoTotal=new TimeSpan(0,20,0),
-            },
-            new  Quiz
-            {
-                NotaTotal= 10,
-                TempoTotal=new TimeSpan(0,0,50),
-            },
-            new  Quiz
-            {
-                NotaTotal= 10,
-                TempoTotal=new TimeSpan(0,20,0),
-            },
-            new  Quiz
-            {
-                Id=10000,
-                Nome="Fulano",
-                NotaTotal= 100,
-                TempoTotal=new TimeSpan(0,10,10),
-            }
-        };
-        #endregion
-       
-        
-        [HttpGet("Ranking")]
-        public IActionResult Ranking()
-        {
-            // Trocar para pegar da api de quizes
-            var quizzes = this.quizes;
 
-            return Ok(new RankingService().GetTop10(quizzes));
+        [HttpGet("Ranking")]
+        public async Task<IActionResult> Ranking()
+        {
+            const string quizApi = "https://masterquizapi.herokuapp.com/api/";
+
+            HttpClient http = new HttpClient() { BaseAddress = new Uri(quizApi) };
+
+            var result = http.GetAsync($"Quiz/Resultado/{1}").Result;
+
+            if (result.IsSuccessStatusCode)
+            {
+                var quizzes = JsonConvert.DeserializeObject<Quiz[]>((await result.Content.ReadAsStringAsync()))
+                    ;
+
+                return Ok(new RankingService().GetTop10(quizzes));
+            }
+
+            return StatusCode((int)result.StatusCode,result.RequestMessage);
         }
     }
 }

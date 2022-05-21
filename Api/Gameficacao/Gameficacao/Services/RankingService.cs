@@ -14,47 +14,45 @@ namespace RankingApi.Services
         Func<Quiz, Ranking>[] RankingList =
             new Func<Quiz, Ranking>[]
             {
-            q=> (q.TempoTotal.TotalDays > 0 && q.TempoTotal.TotalHours >-1 && q.TempoTotal.TotalSeconds >-1 && q.TempoTotal.TotalMinutes >-1 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+            q=> (q.tempoquiz.TotalDays > 0 && q.tempoquiz.TotalHours >-1 && q.tempoquiz.TotalSeconds >-1 && q.tempoquiz.TotalMinutes >-1 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal*10,
-               Nome = q.Nome,
-               Id= q.Id
+               Id= q.idaluno
            } : null!,
-           q=> (q.TempoTotal.TotalDays <= 0  && q.TempoTotal.TotalHours > 0 && q.TempoTotal.TotalHours < 10 &&q.TempoTotal.TotalSeconds >-1 && q.TempoTotal.TotalMinutes >-1 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+           q=> (q.tempoquiz.TotalDays <= 0  && q.tempoquiz.TotalHours > 0 && q.tempoquiz.TotalHours < 10 &&q.tempoquiz.TotalSeconds >-1 && q.tempoquiz.TotalMinutes >-1 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal*30,
-               Nome = q.Nome,
-               Id= q.Id
+
+               Id= q.idaluno
            } : null!,
-           q=> (q.TempoTotal.TotalDays <= 0  && q.TempoTotal.TotalHours > 9 && q.TempoTotal.TotalSeconds >-1 && q.TempoTotal.TotalMinutes >-1 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+           q=> (q.tempoquiz.TotalDays <= 0  && q.tempoquiz.TotalHours > 9 && q.tempoquiz.TotalSeconds >-1 && q.tempoquiz.TotalMinutes >-1 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal*20,
-               Nome = q.Nome,
-               Id= q.Id
+              Id= q.idaluno
            } : null!,
-            q=> (q.TempoTotal.TotalDays <= 0  && q.TempoTotal.TotalHours <= 0 && q.TempoTotal.TotalSeconds >-1 && q.TempoTotal.TotalMinutes > 0 && q.TempoTotal.TotalMinutes < 30 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+            q=> (q.tempoquiz.TotalDays <= 0  && q.tempoquiz.TotalHours <= 0 && q.tempoquiz.TotalSeconds >-1 && q.tempoquiz.TotalMinutes > 0 && q.tempoquiz.TotalMinutes < 30 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal*50,
-               Nome = q.Nome,
-               Id= q.Id
+
+             Id= q.idaluno
            } : null!,
-           q=> (q.TempoTotal.TotalDays <= 0  && q.TempoTotal.TotalHours <= 0 && q.TempoTotal.TotalSeconds >-1 && q.TempoTotal.TotalMinutes > 29 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+           q=> (q.tempoquiz.TotalDays <= 0  && q.tempoquiz.TotalHours <= 0 && q.tempoquiz.TotalSeconds >-1 && q.tempoquiz.TotalMinutes > 29 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal*60,
-               Nome = q.Nome,
-               Id= q.Id
+
+                Id= q.idaluno
            } : null!,
-           q=> (q.TempoTotal.TotalDays <= 0  && q.TempoTotal.TotalHours <= 0 && q.TempoTotal.TotalSeconds >0 && q.TempoTotal.TotalMinutes <=0 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+           q=> (q.tempoquiz.TotalDays <= 0  && q.tempoquiz.TotalHours <= 0 && q.tempoquiz.TotalSeconds >0 && q.tempoquiz.TotalMinutes <=0 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal*70,
-               Nome = q.Nome,
-               Id= q.Id
+
+            Id= q.idaluno
            } : null!,
-           q=> (q.TempoTotal.TotalDays <= 0  && q.TempoTotal.TotalHours <= 0 && q.TempoTotal.TotalSeconds <=0 && q.TempoTotal.TotalMinutes <=0 && q.TempoTotal.TotalMilliseconds >-1) ? new Ranking
+           q=> (q.tempoquiz.TotalDays <= 0  && q.tempoquiz.TotalHours <= 0 && q.tempoquiz.TotalSeconds <=0 && q.tempoquiz.TotalMinutes <=0 && q.tempoquiz.TotalMilliseconds >-1) ? new Ranking
            {
                Nota = q.NotaTotal,
-               Nome = q.Nome,
-               Id= q.Id
+
+             Id= q.idaluno
            } : null!,
 
         }!;

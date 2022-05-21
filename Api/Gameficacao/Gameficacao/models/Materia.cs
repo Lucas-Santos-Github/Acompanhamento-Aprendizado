@@ -8,7 +8,7 @@ namespace Gamificacao.models
 
     public class Materia
     {
-        public string NomeMateria { get; set; }
+        public int MateriaId { get; set; }
         public List<Quiz> Quizzes { get; set; }
     }
 }
