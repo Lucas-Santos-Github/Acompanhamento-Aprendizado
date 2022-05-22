@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="g1gameficacao-001-site1" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Lucas\\Desktop\\Acompanhamento-Aprendizado-main\\Api\\Gameficacao\\Gameficacao\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\rick\\Desktop\\Acompanhamento-Aprendizado\\Api\\Gameficacao\\Gameficacao\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
