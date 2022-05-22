@@ -1,3 +1,30 @@
+const urlParams = new URLSearchParams(window.location.search);
+// const params = Object.fromEntries(urlSearchParams.entries());
+console.log(urlParams);
+
+const nameParam = urlParams.get("name");
+console.log(nameParam);
+
+const idParam = urlParams.get("id");
+console.log(idParam);
+
+localStorage.setItem("nome", nameParam)
+console.log(localStorage);
+
+function salvar(){
+  localStorage.info = document.getElementById("name").value;
+}
+function carregar(){
+
+  if(localStorage.info){
+    document.getElementById("name").value = localStorage.info;
+  }
+}
+console.log(localStorage)
+
+
+
+
 const tableRank = document.querySelector(".table-rank");
 
 const getPosts = async () => {
