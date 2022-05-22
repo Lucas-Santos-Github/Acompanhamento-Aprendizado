@@ -40,7 +40,7 @@ export default function Login(props) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>HeyAPP</Text>
+      <Text style={styles.logo}>Gameficação</Text>
       <View style={styles.inputView} >
         <TextInput
           style={styles.inputText}
@@ -56,14 +56,9 @@ export default function Login(props) {
           placeholderTextColor="#003f5c"
           onChangeText={text => setPassword(text)} />
       </View>
-      <TouchableOpacity>
-        <Text style={styles.forgot}>Forgot Password?</Text>
-      </TouchableOpacity>
+     
       <TouchableOpacity style={styles.loginBtn}>
         <Text onPress={Authenticate} style={styles.loginText}>LOGIN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.loginText}>Signup</Text>
       </TouchableOpacity>
 
 

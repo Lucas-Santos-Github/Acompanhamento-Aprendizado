@@ -49,3 +49,48 @@ export const FakeProgressBar = {
     "totalExp": 300,
     "nextRanking": "O Conquistador"
 };
+
+
+export default  [
+    {
+      id: 1,
+      nome: 'José Maria da Silva',
+      xp: 1000,
+      foto: 'https://cdn.pixabay.com/photo/2020/11/28/03/19/iron-man-5783522__480.png',
+      pos: 2,
+    },
+  
+    {
+      id: 2,
+      nome: 'Maria José',
+      xp: 100,
+      foto: 'https://cdn.pixabay.com/photo/2022/04/26/08/44/cosplay-7157777__340.jpg',
+      pos: 4,
+    },
+  
+    {
+      id: 3,
+      nome: 'Bruno Alves',
+      xp: 58,
+      foto: 'https://cdn.pixabay.com/photo/2020/11/28/03/20/deadpool-5783526__340.png',
+      pos: 5,
+    },
+  
+    {
+      id: 4,
+      nome: 'Nicole Santos',
+      xp: 130,
+      foto: 'https://cdn.pixabay.com/photo/2022/04/26/15/54/cosplay-7158651__340.jpg',
+      pos: 3,
+    },
+  
+    {
+      id: 5,
+      nome: 'João Vitor',
+      xp: 1500,
+      foto: 'https://cdn.pixabay.com/photo/2021/01/29/03/44/hulk-5959620__340.png',
+      pos: 1,
+    }
+  ]
+
+  

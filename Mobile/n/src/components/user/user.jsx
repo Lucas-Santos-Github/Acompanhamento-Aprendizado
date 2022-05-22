@@ -14,7 +14,7 @@ const User = (props) => {
 
         <View style={styles.container}>
             <ScrollView>
-                <UserInfos user={props.user}></UserInfos>
+                <UserInfos logout={props.logout} user={props.user}></UserInfos>
                 <ExpBar></ExpBar>
                 <Achivments></Achivments>
             </ScrollView>

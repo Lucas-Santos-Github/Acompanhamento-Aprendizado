@@ -46,11 +46,11 @@ namespace Gamificacao.Services
 
             switch (t)
             {
-                case 1: return ("Ranking 1", "Ranking 2");
-                case 2: return ("Ranking 2", "Ranking 3");
-                case 3: return ("Ranking 3", "Ranking 4");
-                case 4: return ("Ranking 4", "Ranking 5 ");
-                case 5: return ("Ranking 5", default);
+                case 1: return ("Nível 1", "Nível 2");
+                case 2: return ("Nível 2", "Nível 3");
+                case 3: return ("Nível 3", "Nível 4");
+                case 4: return ("Nível 4", "Nível 5 ");
+                case 5: return ("Nível 5", default);
 
                 default:
                     return (default, default);

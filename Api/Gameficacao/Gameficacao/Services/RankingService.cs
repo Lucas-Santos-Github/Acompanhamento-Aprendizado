@@ -1,15 +1,16 @@
+using Gameficacao.models;
 using Gameficacao.RankingApi;
 using RankingApi.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 
 namespace RankingApi.Services
 {
 
     public class RankingService
     {
-
         #region [Testes de Conquistas]
         Func<Quiz, Ranking>[] RankingList =
             new Func<Quiz, Ranking>[]
@@ -60,7 +61,7 @@ namespace RankingApi.Services
 
         public List<Ranking> GetTop10(Quiz[] quizzes)
         {
-
+           
             var Results = new List<Ranking>();
 
             foreach (var Quiz in quizzes)

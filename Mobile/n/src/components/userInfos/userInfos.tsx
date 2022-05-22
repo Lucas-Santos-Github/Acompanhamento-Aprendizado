@@ -30,6 +30,7 @@ const UserInfos = (props) => {
 
                         <TouchableOpacity>
                             <MaterialCommunityIcons
+                                onPress={()=> props.logout(false)}
                                 name='logout'
                                 size={45}
                                 style={{ backgroundColor: 'black', fontWeight: 'bold', padding: 12 }}

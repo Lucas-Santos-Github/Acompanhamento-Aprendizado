@@ -22,7 +22,13 @@ export const styles = StyleSheet.create({
         flexDirection:'column',
         alignItems:'center'
         
-    }
+    },
+    ProgressBar: {
+        width: 210,
+        height: 20,
+        borderRadius: 8,
+        marginLeft: 30
+      },
     
 })
 
