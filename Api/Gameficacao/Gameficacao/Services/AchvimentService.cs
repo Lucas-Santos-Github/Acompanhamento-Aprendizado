@@ -29,7 +29,7 @@ namespace Apiconquista.Services
                id='2',
                description = "Errou todas as questões",
                title = "Sabe nada",
-                icon = "imagem da conquista"
+               icon = "https://cdn.streamelements.com/uploads/30fcba28-0ef5-4c8b-bf48-3f4a96cd4110.gif"
            } : null,
 
            q=> q.tempoquiz.TotalSeconds < 60 ? new Achivment
@@ -46,8 +46,8 @@ namespace Apiconquista.Services
            {
                id='4',
               description="Demorou mais de 1 hora para terminar o quiz",
-              title="https://cdn-icons-png.flaticon.com/512/1576/1576782.png",
-              icon="Imagem da conquista"
+              title="Imagem da conquista",
+              icon="https://cdn-icons-png.flaticon.com/512/1576/1576782.png"
 
            } : null,
 

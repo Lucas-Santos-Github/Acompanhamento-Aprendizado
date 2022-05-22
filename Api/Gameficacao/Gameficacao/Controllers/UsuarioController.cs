@@ -30,7 +30,7 @@ namespace Gameficacao.Controllers
 
         [AllowAnonymous]
         [HttpPost("authenticate")]
-        public async Task<IActionResult> Authenticate(Usuario user)
+        public async Task<IActionResult> Authenticate([FromBody] Usuario user)
         {
             var jwtToken = await GenerateJwtToken(user);
 
@@ -73,7 +73,8 @@ namespace Gameficacao.Controllers
                         new Claim(ClaimTypes.DateOfBirth, getUser.nascimento.ToString()),
                         new Claim(ClaimTypes.Gender,  getUser.genero),
                         new Claim("LGPD", getUser.lgpd.ToString()),
-                        new Claim("AuthenticationApiToken",  $"Bearer {gettoken.bearer}")
+                        new Claim("AuthenticationApiToken",  $"Bearer {gettoken.bearer}"),
+                        new Claim("UserId",(string) gettoken.id)
                     });
 
                     var tokenDescriptor = new SecurityTokenDescriptor

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { Text, Image, View, ImageBackground } from 'react-native';
+import { Text, Image, View, ImageBackground, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
-import { apiBaseAddress, FakeUser } from '../../enviroments'
+import {  FakeUser } from '../../enviroments'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-
-const UserInfos = () => {
+const UserInfos = (props) => {
 
 
     const [user, setUser] = useState(null);
 
 
-    useEffect(() => LoadUserData(setUser), [])
+    useEffect(() => LoadUserData(setUser, props.user), [props.user])
 
     return (
 
@@ -23,10 +23,20 @@ const UserInfos = () => {
                         ></Image>}
 
                         <View style={styles.detailsBox}>
-                            <Text style={styles.title}> Nome:  <Text style={styles.label}>{user.name}</Text> </Text>
-                            <Text style={styles.title}> Idade: <Text style={styles.label}>{user.birthDay}</Text> </Text>
+                            <Text style={styles.title}> Nome:  <Text style={styles.label}>{user.nome}</Text> </Text>
+                            <Text style={styles.title}> Nascimento: <Text style={styles.label}>{user.nascimento}</Text> </Text>
                             <Text style={styles.title}> Ranking:   <Text style={styles.label}>{user.ranking}</Text> </Text>
                         </View>
+
+                        <TouchableOpacity>
+                            <MaterialCommunityIcons
+                                name='logout'
+                                size={45}
+                                style={{ backgroundColor: 'black', fontWeight: 'bold', padding: 12 }}
+                                color={'purple'}
+                            />
+                        </TouchableOpacity>
+
                     </View>
                 </ImageBackground>
             }
@@ -37,29 +47,13 @@ const UserInfos = () => {
 };
 
 
-function LoadUserData(setUser: Function): void {
-    fetch(`${apiBaseAddress}user`)
-        .then(o => o.json())
-        .then(o => {
-            o.birthDay = GetAge(o);
-            setUser(o);
-        })
-        .catch(o => {
-
-
-            let t = FakeUser
-            t.birthDay = GetAge(t)
-
-            setUser(t)
-
-        })
+function LoadUserData(setUser: Function, user: any): void {
+    user.ranking = FakeUser.ranking;
+    user.background = FakeUser.background;
+    user.photo = FakeUser.photo;
+    setUser(user);   
 }
 
-function GetAge(o) {
-    return (new Date().getFullYear()
-        - new Date(o.birthDay).getFullYear()).toString()
-
-}
 
 
 export default UserInfos;

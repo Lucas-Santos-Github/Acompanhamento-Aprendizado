@@ -1,4 +1,4 @@
-export const apiBaseAddress = "http://localhost:3000/"
+export const apiBaseAddress = "https://localhost:44309/api/"
 
 export const FakeUser = {
     "name": "Jobisclaison",

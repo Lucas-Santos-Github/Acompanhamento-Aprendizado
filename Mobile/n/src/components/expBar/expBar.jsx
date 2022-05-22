@@ -42,7 +42,11 @@ const ExpBar = () => {
 
 
 function LoadExpBarData(setter) {
-    fetch(`${apiBaseAddress}ProgressBar`)
+    fetch(`${apiBaseAddress}Progress/progress`,{
+        headers:{
+            'authorization': `Bearer ${localStorage.getItem('userToken')}`
+        }
+    })
         .then(o => o.json())
         .then(o => setter(o))
         .catch(o=> setter(FakeProgressBar))

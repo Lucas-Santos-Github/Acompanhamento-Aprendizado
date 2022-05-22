@@ -37,9 +37,15 @@ const Achivments = () => {
 
 
 function LoadAchviments(setAchviments: Function): void {
-    fetch(`${apiBaseAddress}achivments`)
+
+    fetch(`${apiBaseAddress}achivments/userachitivments`, {
+            method:'GET',
+            headers:{
+                'authorization': `Bearer ${localStorage.getItem('userToken')}`
+            }
+    })
         .then(o => o.json())
-        .then(o => setAchviments(o))
+        .then(o =>setAchviments(o))
         .catch(o => setAchviments(FakeAchviments))
 }
 

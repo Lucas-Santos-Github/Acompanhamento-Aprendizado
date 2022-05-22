@@ -33,11 +33,11 @@ namespace Gamificacao.Controllers
 
         }
 
-        [HttpGet("progress/{userId}")]
-        public async Task<IActionResult> GetProgress(int userId)
+        [HttpGet("progress")]
+        public async Task<IActionResult> GetProgress()
         {
             this.http.SetExternalUserAuthenticationToken(User);
-            var result = this.http.GetAsync($"Quiz/Resultado/{userId}").Result;
+            var result = this.http.GetAsync($"Quiz/Resultado/{"1" ?? (User.Claims.FirstOrDefault(o => o.Type == "UserId")?.Value ?? "1")}").Result;
 
             if (result.IsSuccessStatusCode)
             {

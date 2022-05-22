@@ -29,11 +29,11 @@ namespace Gamificacao.Controllers
         }
 
 
-        [HttpGet("userachitivments/{userId}")]
-        public async Task<IActionResult> UserAchitivments(int userId)
+        [HttpGet("userachitivments")]
+        public async Task<IActionResult> UserAchitivments()
         {
             this.http.SetExternalUserAuthenticationToken(User);
-            var resultContent = (await this.http.GetAsync($"Quiz/Resultado/{userId}"));
+            var resultContent = (await this.http.GetAsync($"Quiz/Resultado/{"1" ?? (User.Claims.FirstOrDefault(o=> o.Type == "UserId")?.Value ?? "1")}"));
 
             if (resultContent.IsSuccessStatusCode)
             {

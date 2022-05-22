@@ -6,7 +6,7 @@ import { ScrollView, View } from 'react-native'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { StyleSheet } from 'react-native';
 
-const User = () => {
+const User = (props) => {
 
 
     return (
@@ -14,7 +14,7 @@ const User = () => {
 
         <View style={styles.container}>
             <ScrollView>
-                <UserInfos></UserInfos>
+                <UserInfos user={props.user}></UserInfos>
                 <ExpBar></ExpBar>
                 <Achivments></Achivments>
             </ScrollView>
