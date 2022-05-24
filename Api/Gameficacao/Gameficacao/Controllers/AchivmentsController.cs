@@ -33,11 +33,13 @@ namespace Gamificacao.Controllers
         public async Task<IActionResult> UserAchitivments()
         {
             this.http.SetExternalUserAuthenticationToken(User);
-            var resultContent = (await this.http.GetAsync($"Quiz/Resultado/{"1" ?? (User.Claims.FirstOrDefault(o=> o.Type == "UserId")?.Value ?? "1")}"));
+            var userId = int.Parse(User.Claims.FirstOrDefault(o => o.Type == "UserId")?.Value);
+            var resultContent = (await this.http.GetAsync($"Quiz/Resultado"));
 
             if (resultContent.IsSuccessStatusCode)
             {
                 var Quizzes = JsonConvert.DeserializeObject<Quiz[]>(resultContent.Content.ReadAsStringAsync().Result);
+                Quizzes = Quizzes.Where(o => o.idaluno == userId).ToArray();
 
                 return Ok(new AchivmentService().GetAchviments(Quizzes));
             }

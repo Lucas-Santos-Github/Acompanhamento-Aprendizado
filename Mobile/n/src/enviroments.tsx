@@ -1,4 +1,5 @@
 export const apiBaseAddress = "http://g1gameficacao-001-site1.btempurl.com/api/"
+// export const apiBaseAddress = "https://localhost:44309/api/"
 
 export const FakeUser = {
     "name": "Jobisclaison",

@@ -68,8 +68,12 @@ namespace RankingApi.Services
                 Results.AddRange(this.RankingList.Select(func => func(Quiz))
                     .Where(o => o != null));
 
-
-            return Results.OrderByDescending(o => o.Nota).Take(10).ToList();
+            return Results.GroupBy(o => new { o.Id, o.Nome }).Select(o => new Ranking
+            {
+                Id = o.Key.Id,
+                Nome = o.Key.Nome,
+                Nota = o.Sum(w => w.Nota)
+            }).OrderByDescending(o => o.Nota).Take(10).ToList();
         }
 
     }

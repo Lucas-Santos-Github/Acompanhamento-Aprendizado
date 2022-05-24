@@ -37,11 +37,14 @@ namespace Gamificacao.Controllers
         public async Task<IActionResult> GetProgress()
         {
             this.http.SetExternalUserAuthenticationToken(User);
-            var result = this.http.GetAsync($"Quiz/Resultado/{"1" ?? (User.Claims.FirstOrDefault(o => o.Type == "UserId")?.Value ?? "1")}").Result;
+            var userId = int.Parse(User.Claims.FirstOrDefault(o => o.Type == "UserId")?.Value);
+
+            var result = this.http.GetAsync($"Quiz/Resultado").Result;
 
             if (result.IsSuccessStatusCode)
             {
                 var quizzes = JsonConvert.DeserializeObject<List<Quiz>>((await result.Content.ReadAsStringAsync()));
+                quizzes = quizzes.Where(o=> o.idaluno == userId).ToList();
 
 
                 if (quizzes.Any())
@@ -65,7 +68,7 @@ namespace Gamificacao.Controllers
 
             }
 
-            return NotFound("Usuario não encontrado");
+            return Ok(new object[] {});
 
         }
 

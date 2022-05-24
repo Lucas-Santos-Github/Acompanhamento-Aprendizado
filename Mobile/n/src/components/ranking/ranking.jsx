@@ -121,10 +121,8 @@ function GetRanking(setter) {
         .then(o => {
             console.log(o)
             o.forEach((o,i) => {
-                o.nome = 'Teste' + i
                 o.pos = i;
-                o.nota = o.nota + i
-                o.foto = 'https://www.imagenspng.com.br/wp-content/uploads/2015/04/galinha-pintadinha-26.png'
+                o.foto = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${150 -i}.png`
             })
             setter(o);
         })

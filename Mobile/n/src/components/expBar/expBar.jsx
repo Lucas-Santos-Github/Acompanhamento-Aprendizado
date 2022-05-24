@@ -23,7 +23,7 @@ const ExpBar = () => {
                     <Icon name="bolt" size={16} color="black" />
                    {"\t"} EXP {expBar.currentExp}/{expBar.totalExp} – Próximo ranking: {expBar.nextRanking}
                 </Text>
-                <ProgressBar style={styles.ProgressBar}  progress={expBar.progressPercent} color={Colors.greenA700} 
+                <ProgressBar style={styles.ProgressBar}  progress={expBar.progressPercent / 100} color={Colors.greenA700} 
                 
                 />
                 {/* <Progress.Bar
@@ -52,7 +52,7 @@ function LoadExpBarData(setter) {
     })
         .then(o => o.json())
         .then(o => setter(o))
-        .catch(o=> setter(FakeProgressBar))
+        // .catch(o=> setter(FakeProgressBar))
 }
 
 
