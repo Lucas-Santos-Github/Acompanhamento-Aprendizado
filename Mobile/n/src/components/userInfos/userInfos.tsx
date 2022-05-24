@@ -25,7 +25,7 @@ const UserInfos = (props) => {
                         <View style={styles.detailsBox}>
                             <Text style={styles.title}> Nome:  <Text style={styles.label}>{user.nome}</Text> </Text>
                             <Text style={styles.title}> Nascimento: <Text style={styles.label}>{user.nascimento}</Text> </Text>
-                            <Text style={styles.title}> Ranking:   <Text style={styles.label}>{user.ranking}</Text> </Text>
+                            <Text style={styles.title}> Pefil:   <Text style={styles.label}>{user.role}</Text> </Text>
                         </View>
 
                         <TouchableOpacity>
@@ -49,7 +49,6 @@ const UserInfos = (props) => {
 
 
 function LoadUserData(setUser: Function, user: any): void {
-    user.ranking = FakeUser.ranking;
     user.background = FakeUser.background;
     user.photo = FakeUser.photo;
     setUser(user);   

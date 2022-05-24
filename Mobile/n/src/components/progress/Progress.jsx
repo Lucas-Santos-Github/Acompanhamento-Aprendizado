@@ -10,6 +10,7 @@ const Progress = (props) => {
 
   const [ranking, setRanking] = useState('')
   const [xp, setXp] = useState('')
+  const [descricao, setDescricao] = useState([])
 
   useEffect(()=> LoadExpBarData(setXp,setRanking),[])
 
@@ -47,8 +48,8 @@ const Progress = (props) => {
     <Card.Cover style ={style.EditCard} source={{ uri: 'https://p4.wallpaperbetter.com/wallpaper/447/658/479/roronoa-zoro-4k-new-hd-pc-wallpaper-thumb.jpg' }} />
       <Card.Content  style ={style.Card}>
       <Title style = {{textAlign: "center",fontFamily: 'Open Sans',fontWeight:'900'}}>Nível 1</Title>
-      <Paragraph style = {{textAlign: "justify"}}>Descrição nível 1</Paragraph>
-          <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000"}}>5000XP</Badge>
+      <Paragraph style = {{textAlign: "justify"}}> </Paragraph>
+          <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000"}}>Santoryou</Badge>
     </Card.Content>
   </Card>
 
@@ -57,32 +58,32 @@ const Progress = (props) => {
   
       <Card.Content  style ={style.Card}>
       <Title style = {{textAlign: "center",fontFamily: 'Open Sans',fontWeight:'900'}}>Nível 2</Title>
-      <Paragraph style = {{textAlign: "justify"}}>Descrição nível 2</Paragraph>
-       <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000" }}>20000XP</Badge>
+      <Paragraph style = {{textAlign: "justify"}}> </Paragraph>
+       <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000" }}>O Mizeravel é um Gênio!</Badge>
     </Card.Content>
   </Card>
   <Card style ={style.EditCard1}>
     <Card.Cover style ={style.EditCard} source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgWBfX7C2Z1CRbdgVUPmYiP105LbBi2IBeqw&usqp=CAU' }} />
       <Card.Content  style ={style.Card}>
       <Title style = {{textAlign: "center",fontFamily: 'Open Sans',fontWeight:'900'}}>Nível 3</Title>
-      <Paragraph style = {{textAlign: "justify"}}>Descrição Nível 3</Paragraph>
-        <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000" }}>30000XP</Badge>
+      <Paragraph style = {{textAlign: "justify"}}></Paragraph>
+        <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000" }}>Rap Monkey</Badge>
     </Card.Content>
   </Card>
   <Card style ={style.EditCard1}>
     <Card.Cover style ={style.EditCard} source={{ uri: 'https://besthqwallpapers.com/Uploads/2-7-2018/57797/thumb2-ultra-instinct-goku-4k-son-goku-fire-dragon-ball.jpg' }} />
       <Card.Content  style ={style.Card}>
       <Title style = {{textAlign: "center",fontFamily: 'Open Sans',fontWeight:'900'}}>Nível 4</Title>
-      <Paragraph style = {{textAlign: "justify"}}>Descrição Nível 4</Paragraph>
-          <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000"}}>5000XP</Badge>
+      <Paragraph style = {{textAlign: "justify"}}></Paragraph>
+          <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000"}}>Instinto Superior</Badge>
     </Card.Content>
   </Card>
   <Card style ={style.EditCardLast}>
     <Card.Cover style ={style.EditCard} source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmp59t-tgQDuK_XUpXmUIJYOWXJ-9M7soSg&usqp=CAU' }} />
       <Card.Content  style ={style.Card}>
       <Title style = {{textAlign: "center",fontFamily: 'Open Sans',fontWeight:'900'}}>Nível 5</Title>
-      <Paragraph style = {{textAlign: "justify"}}>Descrição nível 5</Paragraph>
-          <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000"}}>5000XP</Badge>
+      <Paragraph style = {{textAlign: "justify"}}></Paragraph>
+          <Badge style = {{marginRight: 80, marginTop: 5, backgroundColor: "#000000"}}>Kyubbi Sennin Mode</Badge>
     </Card.Content>
   </Card>
   

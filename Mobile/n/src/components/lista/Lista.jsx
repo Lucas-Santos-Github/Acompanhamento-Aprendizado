@@ -13,7 +13,7 @@ const Lista = ({data}) => {
         <Text style={styles.nomeUsu}>{data.nome} </Text>
         
       </View>
-      <Text style={styles.xpUsu}>{data.nota + " XP"}</Text>
+      <Text style={styles.xpUsu}>{"Nota: "+ data.nota}</Text>
 
     </TouchableOpacity>
   );
