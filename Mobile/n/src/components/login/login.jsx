@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { apiBaseAddress } from '../../enviroments'
+import { AppContext } from '../contexts/appContext';
 
 export default function Login(props) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const {setUser} = useContext(AppContext);
 
   function Authenticate() {
 
@@ -33,7 +36,7 @@ export default function Login(props) {
       return;
     }
 
-    props.user(user.user)
+    setUser(user.user)
     props.authenticate(true);
     localStorage.setItem('userToken', user.jwt)
   }
