@@ -2,25 +2,27 @@ import User from "./src/components/user/user";
 import Login from './src/components/login/login';
 import Ranking from './src/components/ranking/ranking';
 import Progress from "./src/components/progress/Progress";
-import { useState } from "react";
+import React, { useState } from "react";
+import { AppContextProvider } from "./src/components/contexts/appContext";
+
 
 export default function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(!true);
-  const [user, setUser] = useState()
 
 
   return (
     <>
-      {!isAuthenticated ? <Login user={setUser} authenticate={setIsAuthenticated} /> :
+      <AppContextProvider>
+        {!isAuthenticated ? <Login authenticate={setIsAuthenticated} /> :
 
-        <>
-          <User logout ={setIsAuthenticated} user={user} />
-          <Progress user={user} />
-          <Ranking />
-          
-        </>
-      }
+          <>
+            <User logout={setIsAuthenticated} />
+            <Progress />
+            <Ranking />
+          </>
+        }
+      </AppContextProvider>
     </>
   );
 }

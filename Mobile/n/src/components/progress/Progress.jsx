@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { ProgressBar, Colors } from 'react-native-paper';
 import { Card, Title, Paragraph } from 'react-native-paper';
 import { Badge } from 'react-native-paper';
 import { ScrollView } from 'react-native';
 import { apiBaseAddress } from '../../enviroments';
 
-const Progress = (props) => {
+const Progress = () => {
 
   const [ranking, setRanking] = useState('')
   const [xp, setXp] = useState('')
-  const [descricao, setDescricao] = useState([])
+
 
   useEffect(()=> LoadExpBarData(setXp,setRanking),[])
 
