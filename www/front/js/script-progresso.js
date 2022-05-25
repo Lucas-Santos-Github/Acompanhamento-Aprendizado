@@ -97,7 +97,7 @@ senha: "professor"
             <div class="text-container-card">
                 <h3>Nível 2</h3>
                 <div>
-                Verme Maldito.
+                O Mizeravel é um Gênio.
                 </div>
             </div>
         </div>
