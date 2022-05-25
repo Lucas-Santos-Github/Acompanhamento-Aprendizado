@@ -46,8 +46,8 @@ namespace Gamificacao.Services
 
             switch (t)
             {
-                case 1: return ("Nível 1 - Santoryou", "Nível 2 - Verme Maldito");
-                case 2: return ("Nível 2 - Verme maldito", "Nível 3 - Rap Monkey");
+                case 1: return ("Nível 1 - Santoryou", "Nível 2 - O Mizeravel é um Gênio");
+                case 2: return ("Nível 2 - O Mizeravel é um Gênio", "Nível 3 - Rap Monkey");
                 case 3: return ("Nível 3 - Rap Monkey", "Nível 4 - Instinto Superior");
                 case 4: return ("Nível 4 - Instinto Superior", "Nível 5 - Kyubbi Sennin Mode");
                 case 5: return ("Nível 5 - Kyubbi Sennin Mode", default);
