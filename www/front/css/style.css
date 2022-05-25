@@ -26,7 +26,13 @@
     height: 400px;
 }
 
-.card {
+#imagemHero {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position-y: -15cm;
+}
+
+/* .card {
     width: 27rem; 
     margin-bottom: 10px; 
     border-width: thick;
@@ -53,9 +59,9 @@
     position: absolute; 
     padding-top: 60px; 
     padding-left: 10px;
-}
+} */
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     .card {
         width: 20rem; 
         margin-bottom: 10px; 
@@ -99,7 +105,7 @@
         display: none;
     }
 
-}
+} */
 <<<<<<< HEAD
 
 /*
