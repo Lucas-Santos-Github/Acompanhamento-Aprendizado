@@ -16,7 +16,7 @@ function detalhesUsuario(url) {
       },
       body: JSON.stringify({
         email: "professor",
-        senha: "professor"
+senha: "professor"
       })
     })
 
@@ -32,21 +32,21 @@ function detalhesUsuario(url) {
           <div class="row">
             <div class="col-sm-2">
             <img
-            src="${x.user.profile_pic ? x.user.profile_pic : "https://p4.wallpaperbetter.com/wallpaper/447/658/479/roronoa-zoro-4k-new-hd-pc-wallpaper-thumb.jpg"}"
+            src="${x.user.profile_pic ? x.user.profile_pic : "https://i.pinimg.com/736x/d6/82/57/d682577ac42e84125461689aa9b4623a.jpg"}"
             class="avatar">
             </div>
             <div class="col-sm" style="padding-top: 25px">
               <h2 class="infousuario fw-bolder"
                 style="color: white; text-transform: uppercase; text-shadow: 2px 2px 8px #000000;">${x.user.nome}</h2>
               <p class="fw-bold" style="color: white;">@${x.user.role}</p>
-              <p class="infousuario" style="color: white;"><i class="bi bi-clock"></i> Ano de nascimento:${pegaAno(x.user.nascimento)} </p>
+              <p class="infousuario" style="color: white;"><i class="bi bi-clock"></i> Nascido em ${pegaAno(x.user.nascimento)} </p>
               
             </div>
           </div>
         </div>
         
       `
-      document.getElementById("imagemHero").style.backgroundImage = `url('${x.user.BackgroundPic ? x.user.BackgroundPic : "https://images5.alphacoders.com/889/889488.jpg"}')`
+      document.getElementById("imagemHero").style.backgroundImage = `url('${x.user.BackgroundPic ? x.user.BackgroundPic : "https://i.pinimg.com/originals/31/0d/4a/310d4a2f36b4fe4a07a31f5f7759a4d3.jpg"}')`
       localStorage.setItem("auth", x.jwt)
     })
 
@@ -80,7 +80,7 @@ function detalhesUsuario(url) {
             <div class="text-container-card">
                 <h3>Nível 1</h3>
                 <div>
-                    Descrição nivel 1.
+                Santoryou.
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ function detalhesUsuario(url) {
             <div class="text-container-card">
                 <h3>Nível 2</h3>
                 <div>
-                    Descrição nivel 2.
+                Verme Maldito.
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@ function detalhesUsuario(url) {
             <div class="text-container-card">
                 <h3>Nível 3</h3>
                 <div>
-                    Descrição nivel 3.
+                Rap Monkey.
                 </div>
             </div>
         </div>
@@ -131,7 +131,7 @@ function detalhesUsuario(url) {
             <div class="text-container-card">
                 <h3>Nível 4</h3>
                 <div>
-                    Descrição nivel 4.
+                Instinto Superior.
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@ function detalhesUsuario(url) {
             <div class="text-container-card">
                 <h3>Nível 5</h3>
                 <div>
-                    Descrição nivel 5.
+                Kyubbi Sennin Mode.
                 </div>
             </div>
         </div>
