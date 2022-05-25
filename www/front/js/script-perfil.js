@@ -20,7 +20,7 @@ function detalhesUsuario(url) {
     })
     .then(res => res.json())
     .then(x => {
-      console.log(x)
+      //console.log(x)
       document.getElementById("infousuario").innerHTML =
         `
       <div class="container" id="infousuario">
@@ -55,7 +55,7 @@ function detalhesUsuario(url) {
       })
         .then(x => x.json())
         .then(res => {
-          console.log(res)
+          //console.log(res)
           document.getElementById("estatisticas").innerHTML =
             `
         <h2 class="destaque-perfil">Estatísticas</h2>
@@ -80,7 +80,7 @@ function detalhesUsuario(url) {
       })
         .then(x => x.json())
         .then(res => {
-          console.log(res)
+          //console.log(res)
 
           achievements.innerHTML = `<h2 class="destaque-perfil">Conquistas</h2>`;
 
