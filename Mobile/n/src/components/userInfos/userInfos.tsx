@@ -17,9 +17,19 @@ const UserInfos = (props) => {
                 user &&
                 <ImageBackground source={{ uri: FakeUser.background }} resizeMode="cover" style={styles.imagebkg}>
                     <View style={styles.userContainer}>
-                        {user && <Image style={styles.userPhoto} source={{ uri: user.photo  }}
-                        ></Image>}
+                        {user &&
+                            <Image style={styles.userPhoto} source={{ uri: user.photo }}
+                            ></Image>}
 
+                        <TouchableOpacity>
+                            <MaterialCommunityIcons
+                                onPress={() => props.logout(false)}
+                                name='logout'
+                                size={15}
+                                style={{ backgroundColor: 'black', fontWeight: 'bold', padding: 2 }}
+                                color={'purple'}
+                            />
+                        </TouchableOpacity>
                         <View style={styles.detailsBox}>
                             <Text style={styles.title}> Nome:  <Text style={styles.label}>{user.nome}</Text> </Text>
                             <Text style={styles.title}> Pefil:   <Text style={styles.label}>{user.role}</Text> </Text>
@@ -28,15 +38,6 @@ const UserInfos = (props) => {
                             <Text style={styles.title}> Email: <Text style={styles.label}>{user.email}</Text> </Text>
                         </View>
 
-                        <TouchableOpacity>
-                            <MaterialCommunityIcons
-                                onPress={() => props.logout(false)}
-                                name='logout'
-                                size={45}
-                                style={{ backgroundColor: 'black', fontWeight: 'bold', padding: 12 }}
-                                color={'purple'}
-                            />
-                        </TouchableOpacity>
 
                     </View>
                 </ImageBackground>

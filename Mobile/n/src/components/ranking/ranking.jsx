@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState, useEffect } from 'react';
 import { View, StyleSheet, TextInput, SafeAreaView, FlatList, TouchableOpacity } from 'react-native'
 import Lista from '../lista/Lista';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { apiBaseAddress } from '../../enviroments';
+import { AppContext } from '../contexts/appContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Ranking = () => {
     const [searchText, setSearchText] = useState('');
     const [list, setList] = useState([]);
 
 
-    useEffect(() => GetRanking(setList), [])
+    useEffect( () =>  GetRanking(setList), [])
 
 
     //Filtrar letras na barra de pesquisa
     useEffect(() => {
 
         if (searchText == '') {
-            GetRanking(setList)
+             GetRanking(setList)
         }
         else {
             setList(list.filter(item => (item.nome.toLowerCase().indexOf(searchText.toLowerCase()) > -1)));
@@ -111,10 +114,10 @@ const Ranking = () => {
     );
 };
 
-function GetRanking(setter) {
+ async function GetRanking(setter) {
     fetch(`${apiBaseAddress}Ranking/Ranking`, {
         headers: {
-            'authorization': `Bearer ${localStorage.getItem('userToken')}`
+            'authorization': `Bearer ${await AsyncStorage.getItem('token')}`
         }
     })
         .then(o => o.json())

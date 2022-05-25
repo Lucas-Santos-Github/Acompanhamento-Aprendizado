@@ -1,13 +1,16 @@
 export const apiBaseAddress = "http://g1gameficacao-001-site1.btempurl.com/api/"
 // export const apiBaseAddress = "https://localhost:44309/api/"
 
+import t from '../assets/t.png'
+
+
 export const FakeUser = {
     "name": "Jobisclaison",
     "ranking": "O devorador de sub-mundos",
     "birthDay": "12/11/2000",
     "id": 257,
     "photo": "https://w7.pngwing.com/pngs/389/503/png-transparent-new-super-mario-bros-u-super-mario-super-mario-bros-hand-nintendo.png",
-    "background": "https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711"
+    "background": t || 'https://media.istockphoto.com/photos/purple-defocused-blurred-motion-abstract-background-picture-id1273929462?k=20&m=1273929462&s=612x612&w=0&h=jJ0xkuDVJQMp6YwnAiqbtM8nwid36M97VIFxCP_sKCE='
 };
 
 export const FakeAchviments = [

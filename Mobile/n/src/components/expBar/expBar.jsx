@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Text, View } from 'react-native'
 import { styles } from './styles';
 import { apiBaseAddress, FakeProgressBar } from '../../enviroments';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ProgressBar, Colors } from 'react-native-paper';
+import { AppContext } from '../contexts/appContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
 
 
 const ExpBar = () => {
 
     const [expBar, setExbar] = useState(null)
 
-    useEffect(() => LoadExpBarData(setExbar), [])
+    useEffect( () =>  LoadExpBarData(setExbar), [])
 
     return (<>
 
@@ -44,10 +48,10 @@ const ExpBar = () => {
 };
 
 
-function LoadExpBarData(setter) {
+ async function LoadExpBarData(setter) {
     fetch(`${apiBaseAddress}Progress/progress`,{
         headers:{
-            'authorization': `Bearer ${localStorage.getItem('userToken')}`
+            'authorization': `Bearer ${await AsyncStorage.getItem('token')}`
         }
     })
         .then(o => o.json())

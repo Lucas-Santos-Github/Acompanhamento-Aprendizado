@@ -30,7 +30,9 @@ export const styles = StyleSheet.create({
         backgroundColor: 'black',
         padding: 12,
         width: "75%",
-        textAlign: 'center'
+        textAlign: 'center',
+        display:'flex',
+        flexDirection:'column'
     },
     title: {
         color: 'white',

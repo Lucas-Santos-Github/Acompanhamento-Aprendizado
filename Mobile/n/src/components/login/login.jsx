@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { apiBaseAddress } from '../../enviroments'
 import { AppContext } from '../contexts/appContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export default function Login(props) {
 
@@ -24,12 +26,12 @@ export default function Login(props) {
       })
     })
       .then(o => o.json())
-      .then(o => AuthValidation(o))
+      .then( o =>  AuthValidation(o))
       .catch(e => console.log(e))
 
   }
 
-  function AuthValidation(user) {
+   function AuthValidation(user) {
     
     if (String(user.jwt).trim().toLowerCase() === 'not found') {
       alert('Usuário ou senha inválidos ! 😒')
@@ -38,7 +40,7 @@ export default function Login(props) {
 
     setUser(user.user)
     props.authenticate(true);
-    localStorage.setItem('userToken', user.jwt)
+    AsyncStorage.setItem('token',user.jwt)
   }
 
   return (

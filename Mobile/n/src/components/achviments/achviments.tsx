@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Text, View, Image } from 'react-native'
 import { styles } from './styles';
 import { apiBaseAddress, FakeAchviments } from '../../enviroments'
+import { AppContext } from '../contexts/appContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+
 
 const Achivments = () => {
 
     const [achivments, setAchviments] = useState([]);
+    
 
-    useEffect(() => LoadAchviments(setAchviments), [])
+    useEffect( () => { LoadAchviments(setAchviments)}, [])
 
     return (
 
@@ -36,12 +42,12 @@ const Achivments = () => {
 }
 
 
-function LoadAchviments(setAchviments: Function): void {
+ async function LoadAchviments(setAchviments: Function)  {
 
     fetch(`${apiBaseAddress}achivments/userachitivments`, {
             method:'GET',
             headers:{
-                'authorization': `Bearer ${localStorage.getItem('userToken')}`
+                'authorization': `Bearer ${await AsyncStorage.getItem('token')}`
             }
     })
         .then(o => o.json())

@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: 'black',
     marginBottom: 1,
-    marginLeft: 10,
-    fontFamily: 'Open Sans',
+    marginLeft: 10
   },
 
   xpUsu: {
