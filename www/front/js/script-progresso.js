@@ -191,7 +191,6 @@ function detalhesUsuario(url) {
                 
             </div>
         </div>
-            <h1> ${nivelString(res.currentRanking)}
       `
 
         });
