@@ -14,8 +14,8 @@ function detalhesUsuario(url) {
         'Content-Type': 'application/json;charset=UTF-8'
       },
       body: JSON.stringify({
-        email: "lucas@teste.com", //Professor ; cesarh.oncala@gmail.com ; lucas@teste.com 
-        senha: "1234" //Professor ; 1234 ; 1234
+        email: "Professor", //Professor ; cesarh.oncala@gmail.com ; lucas@teste.com 
+        senha: "Professor" //Professor ; 1234 ; 1234
       })
     })
     .then(res => res.json())
